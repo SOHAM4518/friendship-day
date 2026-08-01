@@ -515,24 +515,20 @@ dot.classList.toggle("active",index===current);
 
 }
 
-const shareBtn = document.getElementById("shareBtn");
+document.getElementById("shareBtn").addEventListener("click", () => {
 
-if (shareBtn) {
-    shareBtn.addEventListener("click", () => {
+    const url = "https://soham4518.github.io/friendship-day/";
 
-        const text =
+    const text =
 `❤️ Happy Friendship Day Chitra ❤️
 
-A small surprise made with lots of love.
+I made something special just for you.
 
-From Soham ❤️
+${url}`;
 
-${window.location.href}`;
+    window.open(
+        "https://wa.me/?text=" + encodeURIComponent(text),
+        "_blank"
+    );
 
-        window.open(
-            "https://wa.me/?text=" + encodeURIComponent(text),
-            "_blank"
-        );
-
-    });
-}
+});
